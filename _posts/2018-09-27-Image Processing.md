@@ -52,4 +52,3 @@ cv2.imwrite(‘newImage.png’,I)
 
 These steps will get you started on OpenCV.
 
-{% include image.html file="images/the_end.png" alt="The end"%}
