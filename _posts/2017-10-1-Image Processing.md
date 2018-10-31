@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Image Processing!
-categories: [blog, travel]
-tags: [hot, summer]
+categories: [Image Processing]
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
