@@ -27,12 +27,16 @@ key = cv2.waitKey(0)
 
 #Task 6 - Display these two on screen side by side using subplots
 fig = plt.figure(1)
-fig.add_subplot(1,2, 1)
+# Creating one row of 2 columns
+# Placing this image in the first postion
+fig.add_subplot(1,2,1)
 plt.imshow(image1Y, 'gray')
 
-fig.add_subplot(1,2, 2)
+# Placing this image in the second postion
+fig.add_subplot(1,2,2)
 plt.imshow(image1Gray, 'gray')
 
+# Display plot
 plt.show()
 
 ````
