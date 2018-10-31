@@ -3,13 +3,13 @@ layout: post
 title: Accessing pixels using OpenCV
 categories: [Image Processing ]
 ---
-In this week lecture we looked at pixels.A pixel is the smallest unit of a digital image. Accessing pixels can be useful to to change the characteristics of an specific pixel or a set of pixels.
+In this week lecture we looked at pixels. A pixel is the smallest unit of a digital image. Accessing pixels can be useful to to change the characteristics of an specific pixel or a set of pixels.
 
 There are 5 pieces of information to identify a pixel: I, J and RGB.
 The format of a pixel looks as follows: I[i,j,c]
 
-* i is the row number and is equivalent to y
-* j is thecolumn number and is equivalent to x
+* i is the row number and is equivalent to y.
+* j is thecolumn number and is equivalent to x.
 * c represents the colour: 0 blue, 1 green and 2 red.
 (Remember RGB in opencv is BGR)
 
@@ -23,7 +23,7 @@ I[i,j] = (255,0,0)
 
 # The colon (:) allows us to select a range of values
 #all the pixels in the rectangle 
-#from (300, 100) to (400, 200)in blue.
+#from (300, 100) to (400, 200) in blue.
 I[100:200,300:400] = (255,0,0)
 ````
 To test the skills we just adquired we were given a new task. This task consisted of capturing the user input to access the location where a user has clicked using mouse events. To do this the code below shows how to implement a mouse callback function that captures left click events.
