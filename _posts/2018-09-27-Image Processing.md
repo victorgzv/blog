@@ -22,4 +22,19 @@ import cv2
 
 # Opening an image from a file:
 I = cv2.imread("airballoons.jpg")
-````
+```
+<h3>Displaying an image with OpenCV</h3>
+
+Now that we can read an image, our next step will be to display it.
+```python
+cv2.imshow("image", I) # the title and path to image
+key = cv2.waitKey(0) # Waits for the next key to be pressed
+cv2.destroyAllWindows() # Destroys the exact window name passed as an argument.
+```
+
+<h3>Saving an image with OpenCV</h3>
+
+Now that we have our image. OpenCV’s cv2.imwrite function enables you to save images to the specified path.
+```python
+cv2.imwrite(‘newImage.png’,I)
+```
