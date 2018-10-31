@@ -63,3 +63,6 @@ original = resized.copy()
 cv2.imshow("image", resized)
 key = cv2.waitKey(0)
 ````
+This is the output of the code above:
+
+![_config.yml]({{ site.baseurl }}/images/pixels_task.png)
