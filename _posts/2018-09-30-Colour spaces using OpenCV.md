@@ -62,6 +62,6 @@ plt.show()
 ````
 The result is the two images side by side. On the left the extracted Y channel and on the right the grayscale image.
 
-![_config.yml]({{ site.baseurl }}/images/colour_task.png)
+![_config.yml]({{ site.baseurl }}/images/colours_task.png)
 
 I hope you find this useful :)
