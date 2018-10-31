@@ -52,5 +52,6 @@ Now that we have our image. OpenCV’s cv2.imwrite function allows you to save i
 cv2.imwrite(‘newImage.png’,I)
 ```
 
-These steps will get you started on OpenCV
+These steps will get you started on OpenCV.
 
+{% include image.html file="the_end.jpg" alt="The end"%}
