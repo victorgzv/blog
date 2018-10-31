@@ -30,16 +30,13 @@ To test the skills we just adquired we were given a new task. This task consiste
 
 Once the user clicks are capture we needed to draw a 201 x 201, 5-pixel thick red square around this location, to then convert the pixels within the square to YUV colour space withouth falling of the edges of the image.
 
-For this task I used this image that you can download.
+You can download the image that I used for this example.
 
 ![_config.yml]({{ site.baseurl }}/images/airballoons.jpg)
 
 ```python
 import cv2
-from matplotlib import pyplot as plt
-from matplotlib import image as image
 import easygui
-import imutils
 import numpy as np
 
 def draw(event,x,y,flags,param):
@@ -61,12 +58,10 @@ def draw(event,x,y,flags,param):
 
             cv2.imshow("image", fit)
 
-
 cv2.namedWindow("image")
 #Callback to draw function 
 cv2.setMouseCallback("image", draw)
 I = cv2.imread("airballoons.jpg")
-
 
 size = np.shape(I) # size of the image
 original = I.copy() #create a copy
