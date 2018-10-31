@@ -26,9 +26,9 @@ I[i,j] = (255,0,0)
 #from (300, 100) to (400, 200) in blue.
 I[100:200,300:400] = (255,0,0)
 ````
-To test the skills we just adquired we were given a new task. This task consisted of capturing the user input to access the location where a user has clicked using mouse events. To do this the code below shows how to implement a mouse callback function that captures left click events.
+To test the skills we just adquired we were given a new task. This task consisted of capturing the user input to access the location where a user has clicked using mouse events. The code shown below shows how to implement a mouse callback function that captures left click events.
 
-Once the user clicks are capture we needed to draw a 201 x 201, 5-pixel thick red square around this location, to then convert the pixels within the square to YUV colour space withouth falling of the edges of the image.
+Once the user clicks are captured we needed to draw a 201 x 201, 5-pixel thick red square around this location, to then convert the pixels within the square to YUV colour space withouth falling of the edges of the image.
 
 You can download the image that I used for this example.
 
