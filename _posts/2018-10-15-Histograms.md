@@ -36,7 +36,8 @@ import easygui
 I = cv2.imread("Wartime.jpg")
 
 plt.figure()
-plt.subplot(2,2,1) #there will be two rows, two columns of plots, we will plot this first one in location 1
+plt.subplot(2,2,1) #there will be two rows, two columns of plots
+#we will plot this first one in location 1
 plt.imshow(I)
 
 grey = cv2.cvtColor(I,cv2.COLOR_BGR2GRAY)
