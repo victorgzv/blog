@@ -4,8 +4,8 @@ title: Image Maths
 categories: [Image Processing ]
 ---
 
-This week in Image Processing we covered image transformations (scaling,cropping and rotating images) and image mathmatics.
-For this post I will focus on the maths that can be applied on images. We can use arithmetic operations on images including addition, subtraction, multiplication and division.
+This week in Image Processing we covered image transformations (scaling,cropping,rotating images) and image mathmatics.
+For this post I will focus on the maths operations that can be applied on images. We can use arithmetic operations on images including addition, subtraction, multiplication and division.
 For the following operations the images should be the same size.
 
 * Addition:
