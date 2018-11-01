@@ -44,9 +44,11 @@ A = cv2.addWeighted(Image1,0.7,Image2,0.3,0)
 # the first and second array elements of each image.
 ````
 
-![_config.yml]({{ site.baseurl }}/images/histograms_task.png)
 
-The following task shows how to scale images and adding them up to get a composite image, as well as how to use the addWeighted function.
+
+The following task shows how to scale images and adding them up to get a composite image, as well as how to use the addWeighted function. The images used for this task are the sime size.
+
+![_config.yml]({{ site.baseurl }}/images/im1.png)
 
 <h3>How do I do it in OpenCV?</h3>
 
@@ -74,3 +76,6 @@ cv2.imshow('image',res3)
 
 key = cv2.waitKey(0)
 ````
+The output of adding two images:
+
+![_config.yml]({{ site.baseurl }}/images/im2.png)
