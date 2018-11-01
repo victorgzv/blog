@@ -1,5 +1,5 @@
 ---
 layout: post
-title: Face Detection
+title: Face Detection Team Project
 categories: [Image Processing]
 ---
