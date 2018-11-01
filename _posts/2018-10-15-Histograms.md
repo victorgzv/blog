@@ -45,3 +45,4 @@ plt.show()
 ````
 
 
+![_config.yml]({{ site.baseurl }}/images/histograms_task.png)
