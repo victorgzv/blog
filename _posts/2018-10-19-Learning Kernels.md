@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kernels
+title: Learning Kernels
 categories: [Image Processing]
 ---
 Yesterday we learned more about kernels.Image Kernels are a small matrix used to apply effects such as sharpening,outlining, gradient extraction, noise reduction,etc. There are the key for many image processing operations as they allow us to determine the most important parts of an image. This is an operator which makes each pixel a weighted sum of its
