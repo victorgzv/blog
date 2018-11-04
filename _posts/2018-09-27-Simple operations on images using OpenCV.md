@@ -53,3 +53,7 @@ cv2.imwrite(‘newImage.png’,I)
 These steps will get you started on OpenCV.
 
 ![_config.yml]({{ site.baseurl }}/images/the_end.png)
+
+  // some contents
+  {% include disqus.html %}
+  // some contents
