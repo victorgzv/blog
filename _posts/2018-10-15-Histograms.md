@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Histograms
+comments: true
 categories: [Image Processing ]
 ---
 
