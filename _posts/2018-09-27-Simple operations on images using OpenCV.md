@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Simple operations on images using OpenCV
+comments : true
 categories: [Image Processing]
 ---
 Hi there! My name is Victor Gonzalez and I'm a Computer Science student. This week, we had our first lecture in Image Processing and we set up Python and OpenCV.
