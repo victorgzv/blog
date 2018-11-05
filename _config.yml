@@ -37,6 +37,8 @@ footer-links:
 disqus:
   shortname: https-victorgzv-github-io
 
+plugins:
+  - jekyll-seo-tag
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: UA-128605100-1
 
@@ -77,6 +79,7 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-seo-tag #searh engine optimization
 
 # Exclude these files from your production _site
 exclude:
