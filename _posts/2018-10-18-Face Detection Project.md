@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Face Detection Team Project
+title: Face Detection | Team Project
 categories: [Image Processing Project]
 ---
 To date I have done some research on this topic. I came across using different classifiers in order to detect region of faces. There are two widely used classifiers called Haar cascade classifiers and Local Binary Patterns. In this post I will talk about Haar feature-based cascade classifier.
