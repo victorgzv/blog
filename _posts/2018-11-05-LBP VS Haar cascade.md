@@ -23,3 +23,8 @@ From the following screenshot we can see that while LBP is significantly faster 
 Haar cascade is the winner and the most suitable classifier for our project!
 
 ![_config.yml]({{ site.baseurl }}/images/time_diff.png)
+
+<h3>References:</h3>
+
+https://stackoverflow.com/questions/8791178/haar-cascades-vs-lbp-cascades-in-face-detection [Accessed on 4th of November]
+
