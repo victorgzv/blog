@@ -37,8 +37,11 @@ cv.destroyAllWindows()
 ````
 <h3>References</h3>
 
-[1] M. J. Laielli, "Multi-Frame Object Detection," Naval Postgraduate School, Monterey, California, 2012. 
+[1] M. J. Laielli, "Multi-Frame Object Detection," Naval Postgraduate School, Monterey, California, 2012.
+
 [2] P. Viola and M. J. Jones, Rapid Object Detection using a Boosted Cascade of Simple Features, Cambridge: Conference on Computer Vision and Pattern Recognition 
+
 [3] https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html#face-detection
+
 [4] https://en.wikipedia.org/wiki/AdaBoost
 
