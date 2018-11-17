@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Applying Haar cascades classifier to our Project
+title: Applying Haar cascades | Team Project
 categories: [Image Processing Project]
 ---
 In the previous post I talked about face detection using  Haar cascade classifier.
@@ -68,3 +68,9 @@ These are the results obtained by using haar cascades. 18 faces out of 21 where 
 In the folliwing weeks we will focus on improving this algorithm.
 
 ![_config.yml]({{ site.baseurl }}/images/project_output.png)
+
+<h3>References:</h3>
+
+Recommended values for detectMultiscale parameters OpenCV
+https://stackoverflow.com/questions/20801015/recommended-values-for-opencv-detectmultiscale-parameters [Accesed October 28th]
+
