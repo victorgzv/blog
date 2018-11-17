@@ -4,16 +4,16 @@ title: LBP VS Haar cascade | Team Project
 categories: [Image Processing Project]
 ---
 <h3>Local Binary Pattern</h3>
-For the purpose of this project, we have also researched another classifier.
-In this post I will discuss LBP (Local Binary Pattern)Cascades compared to Haar Cascade classifier.
+For the purpose of this project, we have also researched another type of classifier.
+In this post I will discuss LBP (Local Binary Pattern) compared to Haar Cascade classifier.
 
-Similar to Haar Cascades, LBP has also been trained with thousands of images. Each training image was divided into blocks. From this blocks the algorithm looks at 9 pixels at a time. This is a kernel (already explained in previous blogs) that compares the central pixel of the 3 by 3 block with its neighbours. If a neighbour pixel is greater than the middle pixel is set to 1as shown in the image below.
+Similar to Haar Cascades, LBP has also been trained with thousands of images. Each training image is divided into blocks. From this blocks the algorithm looks at 9 pixels at a time. This is a kernel (already explained in previous blogs) that compares the central pixel of the 3 by 3 block with its neighbours. If a neighbour pixel is greater than the middle pixel is set to 1 as shown in the image below.
 
 ![_config.yml]({{ site.baseurl }}/images/LBP.png)
 
-This process is done in a clockwise order. As a result, this technique return a binary number which is then converted to decimal giving value to the middle pixel. This is done to every pixel in a block.
+This process is done in a clockwise order. As a result, this technique returns a binary number which is then converted to a decimal number giving value to the middle pixel. This is done to every pixel in a block.
 
-Finally each block is converted into a histogram (also explained in previous posts) and combined with the rest of blocks we can obtain all the features we requires for face detection.
+Finally each block is converted into a histogram (also explained in previous posts).Combining this with the rest of blocks we can obtain all the features we are interested in for face detection.
 
 In terms of accuracy and speed, each classifier has its pros and cons.
 When I tested it out with my images, I obtained the following results. I used the same parameters in both classifiers. The time taken was recorded. In order to achieve this I used the time python module and substracted the time taken before and after the call to the detect function. This is how the code looks like:
