@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Face Detection Team Project
-categories: [Image Processing]
+categories: [Image Processing Project]
 ---
 
 Our Project focus on identifying region of faces in the following image.
