@@ -65,7 +65,7 @@ cv2.destroyAllWindows()
 `````
 
 These are the results obtained by using haar cascades. 18 faces out of 21 where found.
-In the folliwing weeks we will focus on improving this algorithm.
+In the following weeks we will focus on improving this algorithm.
 
 ![_config.yml]({{ site.baseurl }}/images/project_output.png)
 
