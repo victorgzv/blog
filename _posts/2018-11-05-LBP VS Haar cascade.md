@@ -16,8 +16,23 @@ This process is done in a clockwise order. As a result, this technique return a 
 Finally each block is converted into a histogram (also explained in previous posts) and combined with the rest of blocks we can obtain all the features we requires for face detection.
 
 In terms of accuracy and speed, each classifier has its pros and cons.
-When I tested it out with my images I obtained the following results. I used the same parameters in both classifier and recorded the time taken before and after calling the detect function.
+When I tested it out with my images, I obtained the following results. I used the same parameters in both classifiers. The time taken was recorded. In order to achieve this I used the time python module and substracted the time taken before and after the call to the detect function. This is how the code looks like:
 
+```python
+# Opening an image 
+I = cv2.imread("Graduation.jpg")
+#time value
+t1 = time.time()
+#Load classifier. In this case we are using Haar cascade
+face_cascade = cv2.CascadeClassifier('classifiers/haarcascade_frontalface_default.xml')
+detect(I,face_cascade)#Call to our detect function
+#time after detection
+t2 = time.time()
+#time difference
+time_diff = t2 - t1
+#print difference
+print("Time taken: ",time_diff)
+````
 From the following screenshot we can see that while LBP is significantly faster but less accurate thanm using Haar. (10-20% less accuarte).
 
 Haar cascade is the winner and the most suitable classifier for our project!
