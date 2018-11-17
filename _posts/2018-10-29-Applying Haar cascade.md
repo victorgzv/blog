@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Applying Haar cascades | Team Project
+title: Applying Haar cascade classifier | Team Project
 categories: [Image Processing Project]
 ---
 In the previous post I talked about face detection using  Haar cascade classifier.
