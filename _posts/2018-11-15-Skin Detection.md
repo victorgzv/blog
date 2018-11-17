@@ -3,18 +3,18 @@ layout: post
 title: Skin Detection | Team Project
 categories: [Image Processing Project]
 ---
-In the first blog post of this Face Detection Project, I explained that one of our initial ideas to solve this problem was to isolate the skin colour regions of the people appearing on an image.
+In the first blog post of this Face Detection Project, I explained that one of our initial ideas to solve this problem was to isolate the skin regions of people appearing on an image.
 
 As we have made some progress researching and applying image classifiers, in this post I will focus on skin detection and the OpenCV contours functions.
 
 In the last two weeks we had a few lectures in which we covered colour segmentation. This topic was really useful in order to complete the “Where is Wally” assignment. At this point I feel more comfortable to explore new methods and apply them to our face detection project.
 
 To segment out skin colours from an image we will need to use the Hue Based colour space 
- (Hue, Saturation, and Value) and also one of the many Luminance based colour space (YCBCr, YIQ, and YUV). Using HSV is usually much easier to pick a desired colour as compared to using RGB. For example the skin in channel H is characterized by values between 0 and 50 and in the channel S from 0.23 to 0.68 for Asian and Caucasian ethnics.
+ (Hue, Saturation, and Value) and also one of the many Luminance based colour space (YCBCr, YIQ, and YUV). Using HSV makes easier to pick a desired colour as compared to using RGB. For example the skin in channel H is characterized by values between 0 and 50 and in the channel S from 0.23 to 0.68 for Asian and Caucasian ethnics.[2]
 
 YCbCr is a commonly used color space in digital video domain. Because its representation makes it easy to get rid of some redundant color information and it is a very useful space for skin detection.
 
-The following code shows how I converted the graduation picture to both colour spaces and create a mask for each of them. Each mask ranges between a threshold of skin lower and upper values of skin colours. Finally both mask where added together to obtain better results.
+The following code shows how I converted the graduation picture to both colour spaces and created a mask for each of them. Each mask ranges between a threshold of lower and upper skin values . Finally both masks where added together to obtain better results.
 
 ```python
 I = cv2.imread("Graduation.jpg")
@@ -40,9 +40,7 @@ mask_image = cv2.add(msk_hsv,msk_YCbCr)
 ![_config.yml]({{ site.baseurl }}/images/skin_mask.png)
 
 
-We need to take extra care with very dark parts of the image and probably discard them altogether, as the HSV conversion gets really noisy for small values of V. To achieve it, we need to apply morphological operations such as erode and dilate which will get rid of the noise in the image. Erosion removes the boundary pixels and dilation increases object boundary to background. This way, we can make sure whatever region in background in result is really a background, since boundary region is removed. [1]
-
-
+We need to take extra care with very dark parts of the image and probably discard them all together, as the HSV conversion gets really noisy for small values of V. To achieve it, we need to apply morphological operations such as erode and dilate which will get rid of the noise in the image. Erosion will remove the boundary pixels and dilation will increase object boundary to background. This way, we can make sure what region is background , since boundary region is removed.[1]
 
 ````python
 #morphological operations
@@ -63,7 +61,7 @@ marker32 = np.int32(marker)
 
 ![_config.yml]({{ site.baseurl }}/images/markers.png)
 
-Watershed algorithm  identifies those regions we don’t know if they are background or the desired skin colour. After using this function we know which areas are skin regions and which are background. So we have created marker (it is an array of same size as that of original image, but with int32 datatype) and label the regions inside it. [ 1]
+Watershed algorithm identifies those regions we don’t know if they are background or the desired skin colour. After using this function we know which areas are skin regions and which are background. So we have created a marker (it is an array of same size as that of original image, but with int32 datatype) and labelled the regions inside it. [1]
 
 ```python
 cv2.watershed(I,image_marker32)
@@ -76,7 +74,7 @@ output = cv2.bitwise_and(I,I,mask = image_mask)
 
 Unfortunately, the graduation image has a background similar to the range of skin colours that we want to detect. This algorithm will be test with different images where the background is completely different.
 
-Finally, using contours functions on the masked image we can extract those areas that contain skin. (This may also include hands and legs). By using boundinRect, a rectangle can we drawn around each coordinate of the found contours
+Finally, using contours functions on the masked image we can extract those areas that contain skin. (This may also include hands and legs). By using the boundingRect function, a rectangle can we drawn around each coordinate of the found contours.
 
 The result of this function have been applied to a different image where the background is all green giving us better results.
 
@@ -99,7 +97,12 @@ The future scope of this algorithm will be to detect faces.
 
 
 <h3>References:</h3>
-[1] https://docs.opencv.org/3.4.3/d3/db4/tutorial_py_watershed.html
+
+[1] Watershed algorithm
+https://docs.opencv.org/3.4.3/d3/db4/tutorial_py_watershed.html
+
+[2] Human Skin Detection Using RGB, HSV and YCbCr Color Models
+https://arxiv.org/pdf/1708.02694.pdf
 
 https://courses.cs.washington.edu/courses/cse576/18sp/notes/FaceDetRec18.pdf
 
