@@ -69,6 +69,10 @@ In the following weeks we will focus on improving this algorithm.
 
 ![_config.yml]({{ site.baseurl }}/images/project_output.png)
 
+The same algorithm has been tested on different images of soccer and rugby teams and have been successful.
+
+![_config.yml]({{ site.baseurl }}/images/rugby_test.png)
+
 <h3>References:</h3>
 
 Recommended values for detectMultiscale parameters OpenCV
