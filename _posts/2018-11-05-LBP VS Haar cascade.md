@@ -33,7 +33,7 @@ time_diff = t2 - t1
 #print difference
 print("Time taken: ",time_diff)
 ````
-From the following screenshot we can see that while LBP is significantly faster, its accuracy is less than using Haar. (10-20% less accuarte).
+From the following screenshot we can see that while LBP is significantly faster, its accuracy is less than using Haar. (10-20% less accurate).
 
 Haar cascade is the winner and the most suitable classifier for our project!
 
