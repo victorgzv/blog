@@ -53,7 +53,7 @@ def detect(img,faceCascade):
     print("Faces found:", regionsNo)
     return img
 
-# Opening an image from a file:
+# Opening an image:
 I = cv2.imread("Graduation.jpg")
 
 face_cascade = cv2.CascadeClassifier('classifiers/haarcascade_frontalface_default.xml')
