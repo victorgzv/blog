@@ -81,7 +81,7 @@ The result of this function have been applied to a different image where the bac
 
 ```python
 
-def findFaces():
+def detectSkin():
     _,contours,h= cv2.findContours(image_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     for i in range(len(contours)):
         contours = sorted(contours, key=cv2.contourArea,reverse=False)#sorting contours
