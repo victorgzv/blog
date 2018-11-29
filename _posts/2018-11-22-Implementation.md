@@ -3,6 +3,9 @@ layout: post
 title: Final Code | Team Project
 categories: [Image Processing ]
 ---
+The code bellow shows the final implementation of our project with the two approaches we took towards face detection.
+1. Skin detection.
+2. Haar cascades.
 ```python
 # import the necessary packages:
 import cv2
