@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Final Code | Team Project
-categories: [Image Processing ]
+categories: [Image Processing Project]
 ---
 The code bellow shows the final implementation of our project with the two approaches we took towards face detection.
 1. Skin detection.
