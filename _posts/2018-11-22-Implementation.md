@@ -15,9 +15,9 @@ from matplotlib import pyplot as plt
 from matplotlib import image as image
 import easygui
 import numpy as np
-#---------------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------
 # SKIN SEGMENTATION APPROACH
-#---------------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------
 def skinRange(I):
 
         HSV = cv2.cvtColor(I,cv2.COLOR_BGR2HSV)
@@ -48,7 +48,7 @@ def skinRange(I):
         ret,image_mask = cv2.threshold(m,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
         output = cv2.bitwise_and(I,I,mask = image_mask)
         return output,image_mask
-#---------------------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 def detectSkin(image_mask):
     _,contours,h= cv2.findContours(image_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     for i in range(len(contours)):
@@ -56,9 +56,9 @@ def detectSkin(image_mask):
         L = cv2.arcLength(contours[i] ,True)#length of each contour
         x,y,w,h=cv2.boundingRect(contours[i])
         cv2.rectangle(I,(x,y),(x+w+10,y+h+5),(10,0,255),2)
-#---------------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------
 # HAAR CASCADES APPROACH
-#---------------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------
 def find_region(img,classifier,scaleFactor,minNeighbours,color,region_name):
     #scaleFactor-> some faces take more pixels, we can change this parameters to detect faces that are smaller
     #minNeighbors-> specify how many features we need to approve a region as a face or not
@@ -80,7 +80,7 @@ def detect(img,faceCascade):
     color = {"red":(0,0,255),"green":(0,255,0),"blue":(255,0,0),"black":(0,0,0)}
     coords_list , regionsNo = find_region(img,faceCascade, 1.05, 5, color["red"],"face")
     print("Faces found:", regionsNo)
-#---------------------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 #Calls to the Haar cascade functions
 I = cv2.imread("Graduation.jpg")
 copied= I.copy()
@@ -88,14 +88,14 @@ copied= I.copy()
 face_cascade = cv2.CascadeClassifier('classifiers/haarcascade_frontalface_alt2.xml')
 detect(copied,face_cascade)
 cv2.imshow('Haar cascade',copied)
-#---------------------------------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------
 #Calls to the Skin Segmentation functions
 x,y= skinRange(I)
 detectSkin(y)
 cv2.imshow('mask',x)
 cv2.imshow('Skin segmentation',I)
-#---------------------------------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-´´´´
+````
